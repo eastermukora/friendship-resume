@@ -1,24 +1,28 @@
-import logo from './logo.svg';
+import React, { useState } from "react";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import ResumeForm from './components/ResumeForm';
+import DisplayResume from './components/DisplayResume';
 import './App.css';
 
 function App() {
+  const [resumeData, setResumeData] = useState({
+    name: "",
+    age: "",
+    about: "",
+    likes: [],
+    skills: []
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="app">
+        <Routes>
+          <Route path="/" element={<ResumeForm setResumeData={setResumeData} />} />
+          <Route path="/resume" element={<DisplayResume resumeData={resumeData} />} />
+        </Routes>
+        <Link to="/resume" className="button">See Resume</Link>
+      </div>
+    </Router>
   );
 }
 
