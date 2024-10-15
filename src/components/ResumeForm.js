@@ -37,12 +37,30 @@ function ResumeForm({ setResumeData }) {
       <div class="form-row">
         <div>
           <label for="age">Age:</label>
-          <input type="text" id="age" name="age" />
+          <input 
+          type="number"
+          id="age"
+          name="age"
+          value={formData.age}
+          onChange={handleChange}
+          />
         </div>
         
         <div>
           <label for="sex">Sex:</label>
-          <input type="text" id="sex" name="sex" />
+          <input 
+          list="genders"
+          id="gender"
+          name="gender"
+          value={formData.gender}
+          onChange={handleChange}
+          />
+          <datalist id="genders">
+            <option value="👩 Female" />
+            <option value="👨 Male" />
+            <option value="⚧️ Non-binary" />
+            <option value="🚁 Helicopter" />
+          </datalist>
         </div>
       </div>
         <label>About Me:</label>
