@@ -51,6 +51,21 @@ button:hover {
   background-color: #3c3c6d; /* Darken button on hover for interaction */
 }
 
+.form-row {
+  display: flex;
+  justify-content: space-between; /* Space between elements */
+  gap: 20px; /* Adjust the space between the inputs */
+}
+
+.form-row input, .form-row textarea {
+  flex: 1; /* Inputs take equal width */
+}
+
+.form-row label {
+  flex: 0.3; /* Adjust the label width */
+}
+
+
 .resume-container {
   display: flex;
   justify-content: center;

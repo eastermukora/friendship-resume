@@ -4,6 +4,7 @@ function ResumeForm({ setResumeData }) {
   const [formData, setFormData] = useState({
     name: "",
     age: "",
+    sex: "",
     about: "",
     likes: "",
     skills: ""
@@ -19,6 +20,7 @@ function ResumeForm({ setResumeData }) {
     setResumeData({
       name: formData.name,
       age: formData.age,
+      sex: formData.sex,
       about: formData.about,
       likes: formData.likes.split(","),
       skills: formData.skills.split(",")
@@ -30,10 +32,12 @@ function ResumeForm({ setResumeData }) {
       <form onSubmit={handleSubmit}>
         <label>Name:</label>
         <input type="text" name="name" value={formData.name} onChange={handleChange} />
-        
+      <div className="form-row">
         <label>Age:</label>
         <input type="text" name="age" value={formData.age} onChange={handleChange} />
-        
+        <label>Sex:</label>
+        <input type="text" name="sex" value={formData.sex} onChange={handleChange} />
+      </div>
         <label>About Me:</label>
         <textarea name="about" value={formData.about} onChange={handleChange} />
         
