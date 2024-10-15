@@ -1,5 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import IconButton from '@mui/material/IconButton';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+
 
 function DisplayResume({ resumeData }) {
   return (
@@ -12,7 +15,7 @@ function DisplayResume({ resumeData }) {
 
       <div className="resume-window">
         <h3>Things I Like</h3>
-        <ul>
+        <ul className="centered-list">
           {resumeData.likes.map((like, index) => (
             <li key={index}>{like}</li>
           ))}
@@ -21,14 +24,18 @@ function DisplayResume({ resumeData }) {
 
       <div className="resume-window">
         <h3>Skills</h3>
-        <ul>
+        <ul className="centered-list">
           {resumeData.skills.map((skill, index) => (
             <li key={index}>{skill}</li>
           ))}
         </ul>
       </div>
       
-      <Link to="/" className="button">Back to Form</Link>
+      <Link to="/" className="icon-link">
+        <IconButton>
+        <ArrowBackIcon />
+        </IconButton>
+        Back to Form</Link>
     </div>
   );
 }

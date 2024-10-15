@@ -1,65 +1,129 @@
 .app {
   text-align: center;
   padding: 20px;
+  font-family: 'JetBrains Mono', monospace;
 }
 
 .form-container {
-  background-color: #f0f0f0;
-  padding: 20px;
-  border-radius: 10px;
-  width: 50%;
-  margin: 0 auto;
+  background-color: #f5f5f5; /* Light background for minimalist feel */
+  padding: 40px;
+  border-radius: 12px; /* Slightly less rounded corners for a cleaner look */
+  width: 60%; /* Center the form, slightly wider */
+  margin: 40px auto; /* Increased margin for better spacing */
+  box-shadow: none; /* Remove shadow for a flat design */
 }
 
 label {
   display: block;
-  margin-top: 10px;
+  margin-top: 12px; /* Better spacing */
+  font-size: 16px; /* Standardize font for readability */
+  color: #333; /* Dark grey color for simplicity */
 }
 
 input, textarea {
   width: 100%;
-  padding: 8px;
-  margin-top: 5px;
+  padding: 12px;
+  margin-top: 10px;
+  border: 1px solid #ddd; /* Simple border for flat input */
+  border-radius: 8px; /* Rounded corners for softer appearance */
+  background-color: #fff; /* Neutral white background */
+  font-size: 16px;
+  color: #333;
+}
+
+textarea {
+  resize: vertical;
 }
 
 button {
-  background-color: #ff6347;
+  background-color: #4b4b8a; /* Dark blue-violet for a strong contrast */
   color: white;
   border: none;
-  padding: 10px;
+  padding: 14px 28px;
   margin-top: 20px;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 8px;
+  font-size: 16px; /* Slightly reduced size to match overall simplicity */
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #3c3c6d; /* Darken button on hover for interaction */
 }
 
 .resume-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 30px; /* More spacing between items for breathing room */
+  max-width: 960px;
+  margin: 40px auto; /* Generous margin for better layout */
+  padding-bottom: 60px; /* Extra space at the bottom for a clean layout */
 }
 
 .resume-window {
-  background-color: #f08080;
-  padding: 20px;
-  border-radius: 15px;
-  width: 300px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  animation: float 2s infinite ease-in-out;
+  background-color: #f5f5f5; /* Neutral background to match the form */
+  padding: 24px;
+  border-radius: 12px;
+  width: 320px; /* Standardize size */
+  box-shadow: none; /* No shadow for flat design */
+  transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
 }
 
-@keyframes float {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
+.resume-window:hover {
+  transform: translateY(-5px); /* Small movement effect on hover */
+}
+
+.centered-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none; /* Remove bullets for cleaner list */
+  padding: 0;
+}
+
+.icon-link {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  text-decoration: none;
+  color: #333; /* Soft grey to blend with design */
+  display: flex;
+  align-items: center;
 }
 
 .button {
   text-decoration: none;
-  background-color: #ffa500;
+  background-color: #4b4b8a;
   color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
+  padding: 12px 24px;
+  border-radius: 8px;
   display: inline-block;
   margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #3c3c6d;
+}
+
+.icon-link svg {
+  margin-right: 6px;
+}
+
+/* Added additional styling for more visual consistency */
+
+body {
+  background-color: #f9f9f9; /* Subtle background color */
+  color: #333; /* Dark text for readability */
+}
+
+h1, h2, h3 {
+  font-weight: 400; /* Use a light font weight for a cleaner typography */
+  color: #4b4b8a; /* Consistent color usage */
+}
+
+p {
+  color: #555; /* Use a softer grey for text to avoid harsh contrast */
 }
