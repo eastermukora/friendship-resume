@@ -30,13 +30,20 @@ function ResumeForm({ setResumeData }) {
   return (
     <div className="form-container">
       <form onSubmit={handleSubmit}>
-        <label>Name:</label>
-        <input type="text" name="name" value={formData.name} onChange={handleChange} />
-      <div className="form-row">
-        <label>Age:</label>
-        <input type="text" name="age" value={formData.age} onChange={handleChange} />
-        <label>Sex:</label>
-        <input type="text" name="sex" value={formData.sex} onChange={handleChange} />
+      <div class="name-row">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" />
+      </div> 
+      <div class="form-row">
+        <div>
+          <label for="age">Age:</label>
+          <input type="text" id="age" name="age" />
+        </div>
+        
+        <div>
+          <label for="sex">Sex:</label>
+          <input type="text" id="sex" name="sex" />
+        </div>
       </div>
         <label>About Me:</label>
         <textarea name="about" value={formData.about} onChange={handleChange} />

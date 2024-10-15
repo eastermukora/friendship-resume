@@ -10,6 +10,7 @@ function DisplayResume({ resumeData }) {
       <div className="resume-window">
         <h2>Hello, I am {resumeData.name}</h2>
         <p>Age: {resumeData.age}</p>
+        <p>Sex: {resumeData.sex}</p>
         <p>About me: {resumeData.about}</p>
       </div>
 

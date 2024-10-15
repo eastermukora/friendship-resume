@@ -5,7 +5,7 @@
 }
 
 .form-container {
-  background-color: #f5f5f5; /* Light background for minimalist feel */
+  background-color: #dec584; /* Light background for minimalist feel */
   padding: 40px;
   border-radius: 12px; /* Slightly less rounded corners for a cleaner look */
   width: 60%; /* Center the form, slightly wider */
@@ -36,7 +36,7 @@ textarea {
 }
 
 button {
-  background-color: #4b4b8a; /* Dark blue-violet for a strong contrast */
+  background-color: #8a684b; /* Dark blue-violet for a strong contrast */
   color: white;
   border: none;
   padding: 14px 28px;
@@ -51,6 +51,13 @@ button:hover {
   background-color: #3c3c6d; /* Darken button on hover for interaction */
 }
 
+.name-row {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .form-row {
   display: flex;
   justify-content: space-between; /* Space between elements */
@@ -58,6 +65,7 @@ button:hover {
 }
 
 .form-row input, .form-row textarea {
+  justify-content: space-between;
   flex: 1; /* Inputs take equal width */
 }
 
@@ -77,10 +85,11 @@ button:hover {
 }
 
 .resume-window {
-  background-color: #f5f5f5; /* Neutral background to match the form */
+  background-color: #dec584; /* Neutral background to match the form */
+  color: #333;
   padding: 24px;
   border-radius: 12px;
-  width: 320px; /* Standardize size */
+  width: 25%; /* Standardize size */
   box-shadow: none; /* No shadow for flat design */
   transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
 }
